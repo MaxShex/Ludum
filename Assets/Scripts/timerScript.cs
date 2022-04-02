@@ -8,8 +8,9 @@ public class timerScript : MonoBehaviour
 {
     Image timerBar;
     public float maxTime = 40;
-    float timeLeft;
+    public float timeLeft;
     [SerializeField] private GameObject DeathPanel;
+    picker pickerScript;
 
     void Start()
     {
@@ -28,6 +29,8 @@ public class timerScript : MonoBehaviour
         } else
         {
             DeathPanel.SetActive(true);
+            Time.timeScale = 0;
         }
     }
+
 }

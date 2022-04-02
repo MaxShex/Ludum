@@ -10,6 +10,7 @@ public class picker : MonoBehaviour
     public Transform hands;
     public float objectThrow =3;
 
+
     void Start()
     {
         
@@ -42,7 +43,6 @@ public class picker : MonoBehaviour
         if (holdChecker)
         {
             hit.collider.gameObject.transform.position = hands.position;
-
         }
     }
 
