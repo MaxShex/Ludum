@@ -11,15 +11,21 @@ public class Mover : MonoBehaviour
     public SpriteRenderer sr;
     public bool faceRight = true;
 
+    public float jump;
+    public bool onGround;
+    public Transform GroundChecker;
+    public float checkRadius;
+    public LayerMask Ground;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        
+
     }
 
-    
+
     void Update()
     {
         move.x = Input.GetAxis("Horizontal");
@@ -30,5 +36,12 @@ public class Mover : MonoBehaviour
             transform.localScale *= new Vector2(-1, 1);
             faceRight = !faceRight;
         }
+
+        if (Input.GetKeyDown(KeyCode.Space) && onGround)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jump);
+        }
+
+        onGround = Physics2D.OverlapCircle(GroundChecker.position, checkRadius, Ground);
     }
 }
