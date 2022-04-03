@@ -25,4 +25,14 @@ public class UI : MonoBehaviour
         SceneManager.LoadScene(currentScene);
         Time.timeScale = 1;
     }
+
+    public void PlayButton()
+    {
+        SceneManager.LoadScene("test");
+    }
+
+    public void ExitButton()
+    {
+        Application.Quit();
+    }
 }
