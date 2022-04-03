@@ -8,6 +8,7 @@ TagManager:
   - player
   - death
   - shrine
+  - SecondShrine
   layers:
   - Default
   - TransparentFX
