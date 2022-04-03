@@ -11,6 +11,7 @@ public class picker : MonoBehaviour
     public float objectThrow =3;
 
     private Animator anim;
+    
     void Start()
     {
         anim = transform.GetChild(0).GetComponent<Animator>();

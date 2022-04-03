@@ -11,12 +11,13 @@ public class ShrinesScript : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private GameObject tribute;
-    
+
+    private Animator anim;
     public bool spawn = true;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
+        anim = transform.GetChild(0).GetComponent<Animator>();
     }
 
 
@@ -30,17 +31,19 @@ public class ShrinesScript : MonoBehaviour
                 timer.timeLeft += timer.maxTime - timer.timeLeft;
 
                 Instantiate(tribute, spawnPoint.position, Quaternion.Euler(new Vector3(0, 0, 0)));
-                Destroy(gameObject, 0.65f);
+                Destroy(gameObject);
                 
                 spawn = false;
+                
 
             } else if ( timer.timeLeft <= timer.maxTime - shrineAddsTime  )
             {
                 timer.maxTime = timer.maxTime - 3;
                 timer.timeLeft += shrineAddsTime;
                 Instantiate(tribute, spawnPoint.position, Quaternion.Euler(new Vector3(0, 0, 0)));
-                Destroy(gameObject, 0.65f);
+                Destroy(gameObject);
 
+                
                 spawn = false;
 
             }
@@ -54,6 +57,8 @@ public class ShrinesScript : MonoBehaviour
 
                 Instantiate(tribute, spawnPoint.position, Quaternion.Euler(new Vector3(0, 0, 0)));
                 Destroy(gameObject);
+                pickerScript.holdChecker = false;
+                
                 spawn = true;
 
             }
@@ -63,6 +68,7 @@ public class ShrinesScript : MonoBehaviour
                 timer.timeLeft += shrineAddsTime;
                 Instantiate(tribute, spawnPoint.position, Quaternion.Euler(new Vector3(0, 0, 0)));
                 Destroy(gameObject);
+                
                 spawn = true;
 
             }
