@@ -17,12 +17,13 @@ public class Mover : MonoBehaviour
     public float checkRadius;
     public LayerMask Ground;
 
+    private Animator anim;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-
+        anim = transform.GetChild(0).GetComponent<Animator>();
     }
 
 
@@ -43,5 +44,11 @@ public class Mover : MonoBehaviour
         }
 
         onGround = Physics2D.OverlapCircle(GroundChecker.position, checkRadius, Ground);
+        if (onGround)
+        {
+            anim.SetBool("Grounded", true);
+        }
+        anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        anim.SetFloat("VerticalSpeed", rb.velocity.y);
     }
 }
