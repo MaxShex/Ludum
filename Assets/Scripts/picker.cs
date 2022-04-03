@@ -10,10 +10,10 @@ public class picker : MonoBehaviour
     public Transform hands;
     public float objectThrow =3;
 
-
+    private Animator anim;
     void Start()
     {
-        
+        anim = transform.GetChild(0).GetComponent<Animator>();
     }
 
    
@@ -44,6 +44,7 @@ public class picker : MonoBehaviour
         {
             hit.collider.gameObject.transform.position = hands.position;
         }
+        anim.SetBool("RelicHolded", holdChecker);
     }
 
     private void OnDrawGizmos() 
@@ -51,4 +52,5 @@ public class picker : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawLine(transform.position, transform.position +  Vector3.right * transform.localScale.x * distance);
     }
+    
 }
