@@ -44,10 +44,9 @@ public class Mover : MonoBehaviour
         }
 
         onGround = Physics2D.OverlapCircle(GroundChecker.position, checkRadius, Ground);
-        if (onGround)
-        {
-            anim.SetBool("Grounded", true);
-        }
+        
+            anim.SetBool("Grounded", onGround);
+        
         anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         anim.SetFloat("VerticalSpeed", rb.velocity.y);
     }
