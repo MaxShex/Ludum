@@ -2597,7 +2597,7 @@ PrefabInstance:
     - target: {fileID: 7659799459288685624, guid: ff723f7627f9d90409ac171dd3bade6e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6f785e24c0cd4474784cce921a936581, type: 3}
+      objectReference: {fileID: 21300000, guid: cda51ecda0086f443baef883bf3ad9b0, type: 3}
     - target: {fileID: 7659799459288685624, guid: ff723f7627f9d90409ac171dd3bade6e, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -2708,7 +2708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdChecker: 0
-  distance: 3
+  distance: 0.5
   hands: {fileID: 659424468}
   objectThrow: 3
 --- !u!114 &1905823834
