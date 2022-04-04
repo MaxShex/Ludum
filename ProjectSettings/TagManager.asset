@@ -46,3 +46,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: LandScape
+    uniqueID: 261611183
+    locked: 0
+  - name: MagmaTop
+    uniqueID: 3916195299
+    locked: 0
