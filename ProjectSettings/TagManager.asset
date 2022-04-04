@@ -17,8 +17,13 @@ TagManager:
   - Water
   - UI
   - ground
+<<<<<<< Updated upstream
   - player
   - tribute
+=======
+  - 
+  - 
+>>>>>>> Stashed changes
   - 
   - 
   - 
@@ -46,9 +51,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
   - name: LandScape
     uniqueID: 261611183
     locked: 0
   - name: MagmaTop
     uniqueID: 3916195299
     locked: 0
+<<<<<<< Updated upstream
+=======
+  - name: UI
+    uniqueID: 1266754575
+    locked: 0
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes

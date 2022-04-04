@@ -17,13 +17,20 @@ public class Mover : MonoBehaviour
     public float checkRadius;
     public LayerMask Ground;
 
+<<<<<<< Updated upstream
     private Animator anim;
+=======
+>>>>>>> Stashed changes
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+<<<<<<< Updated upstream
         anim = transform.GetChild(0).GetComponent<Animator>();
+=======
+
+>>>>>>> Stashed changes
     }
 
 
@@ -44,10 +51,13 @@ public class Mover : MonoBehaviour
         }
 
         onGround = Physics2D.OverlapCircle(GroundChecker.position, checkRadius, Ground);
+<<<<<<< Updated upstream
         
             anim.SetBool("Grounded", onGround);
         
         anim.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         anim.SetFloat("VerticalSpeed", rb.velocity.y);
+=======
+>>>>>>> Stashed changes
     }
 }
