@@ -19,7 +19,7 @@ TagManager:
   - ground
   - player
   - tribute
-  - 
+  - paralax
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: ParalaxBack
+    uniqueID: 2230929425
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -51,4 +54,7 @@ TagManager:
     locked: 0
   - name: MagmaTop
     uniqueID: 3916195299
+    locked: 0
+  - name: Player
+    uniqueID: 2837827479
     locked: 0
